@@ -5,7 +5,7 @@ import tempfile
 import shutil
 
 st.set_page_config(layout="wide")
-st.title("Dashboard de Análise de Simulação de Tráfego")
+st.title("Análise de simulação de Tráfego")
 st.write("Faça o upload de um ou mais arquivos de relatório (.xls) para visualizar os resultados consolidados.")
 
 # ==========================================================
@@ -135,19 +135,6 @@ if uploaded_files:
                 st.subheader("Atraso Médio por Direção")
                 st.bar_chart(summary_df, x='Direção', y='Atraso Médio (s/veic)')
 
-            with col2:
-                st.subheader("Número de Paradas por Direção")
-                st.bar_chart(summary_df, x='Direção', y='Nº de Paradas')
-
-            col3, col4 = st.columns(2)
-
-            with col3:
-                st.subheader("Atraso Total (min) por Direção")
-                st.bar_chart(summary_df, x='Direção', y='Atraso Total (min)')
-
-            with col4:
-                st.subheader("Tempo de Parada Total (min) por Direção")
-                st.bar_chart(summary_df, x='Direção', y='Tempo de Parada (min)')
 
         else:
             st.warning("Nenhuma linha de 'Summary' foi encontrada nos arquivos processados.")
