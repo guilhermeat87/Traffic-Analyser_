@@ -59,7 +59,7 @@ def process_traffic_data(file_path):
                     'Atraso_Medio_seg_veic': row[2],
                     'Tempo_Parada_min': row[3],
                     'Tempo_Parada_Medio_seg_veic': row[4],
-                    'Num_Paradas': row[[5]],
+                    'Num_Paradas': row[5],
                     'Media_Paradas_veic': row[6]
                 })
             except:
